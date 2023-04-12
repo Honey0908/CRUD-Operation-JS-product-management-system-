@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Product</title>
+
+    <!-- boostarp Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="../favicon/favicon.jpg" type="image/x-icon">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- script -->
+    <script src="../scripts/view.js" async></script>
+
+</head>
+
+<body>
+
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb" class="d-flex justify-content-center mt-5 mb-0 fs-5">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item "><a href="/" class="text-dark">Home</a></li>
+            <li class="breadcrumb-item active text-dark" aria-current="page">product</li>
+        </ol>
+    </nav>
+
+    <div class="edit-modal">
+
+        <!-- Modal -->
+        <div class="modal fade" id="editProduct" tabindex="-1" role="dialog" aria-labelledby="editProductLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editProductLabel">Edit Product</h5>
+                        <button type="button" class="close p-1" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-3">
+                        <form id="editProductForm">
+                            <div class="form-group py-2">
+                                <label for="productName">Product Name</label>
+                                <input type="text" class="form-control" id="productName" placeholder="Specs,ball,etc..."
+                                    required>
+                            </div>
+                            <div class="form-group py-2">
+                                <label for="productImage">Product Image</label>
+                                <input type="file" class="form-control" id="productImage">
+                            </div>
+                            <div class="form-group py-2">
+                                <label for="productPrice">Product Price</label>
+                                <input type="number" class="form-control" id="productPrice" placeholder="&#8377; 300"
+                                    required>
+                            </div>
+
+                            <div class="form-group py-2">
+                                <label for="productDescription">Description</label>
+                                <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                            </div>
+
+
+                            <div class="modal-footer mt-4 ">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" id="editProductButton" class="btn btn-danger">Edit
+                                    Product</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- card will be shown here -->
+    <div id="main-container">
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
